@@ -3,32 +3,21 @@
 Sistema distribuido para clasificar y recuperar documentos científicos mediante palabras clave, construido con Rust (gRPC), Python (sentence-transformers) y React.
 
 ## Arquitectura
-Frontend (Vercel/Local)
-↓
-Cloudflare Load Balancer
-↓         ↓         ↓
-Servidor 1  Servidor 2  Servidor 3
-(Render)    (Render)    (Render)
-↓         ↓         ↓
-MongoDB Atlas (3 nodos)
-+
+deploy del servidor en render
+deploy del cliente en vercel
+base de datos, MongoDB Atlas (3 nodos)
+
 Clasificador (Hugging Face)
 
 ## Tecnologías
 
 | Componente | Tecnología |
-|------------|-----------|
 | Servicios backend | Rust + gRPC (tonic) |
 | Gateway | Envoy Proxy |
 | Clasificador | Python + FastAPI + sentence-transformers |
 | Base de datos | MongoDB Atlas (Replica Set 3 nodos) |
 | Frontend | React + TypeScript + gRPC-Web |
 
-## Requisitos previos
-
-- Cuenta en [Render](https://render.com) (gratis)
-- Acceso al repositorio de GitHub
-- Variables de entorno (solicitarlas al equipo)
 
 ## Despliegue en Render
 
@@ -50,7 +39,7 @@ Ve a https://render.com y regístrate con GitHub.
 colocar las variables de entorno 
 
 ### Paso 4 — Crear servicio
-Clic en **Create Web Service** y espera ~10 minutos a que compile.
+Clic en **Create Web Service** 
 
 ### Paso 5 — Verificar
 En los logs deberías ver:
