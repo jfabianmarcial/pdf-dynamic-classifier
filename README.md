@@ -46,15 +46,8 @@ Ve a https://render.com y regístrate con GitHub.
    - **Plan:** `Free`
 
 ### Paso 3 — Variables de entorno
-En la sección **Environment** agrega:
 
-| Variable | Valor |
-|----------|-------|
-| `MONGO_URI` | Solicitar al equipo |
-| `MONGO_DB_NAME` | `scidocs` |
-| `JWT_SECRET` | Solicitar al equipo |
-| `JWT_EXPIRATION` | `86400` |
-| `CLASSIFIER_URL` | `https://jofanmg-docuclas-classifier.hf.space` |
+colocar las variables de entorno 
 
 ### Paso 4 — Crear servicio
 Clic en **Create Web Service** y espera ~10 minutos a que compile.
@@ -78,20 +71,7 @@ INFO admin_service: Admin Service escuchando en 0.0.0.0:50054
 - protoc
 - Docker Desktop
 
-### Configurar variables de entorno
-Copia el archivo de ejemplo:
-```bash
-cp server/.env.example server/.env
-```
-Edita `server/.env` con los valores correctos.
-
-### Levantar todo con un comando
-```powershell
-cd C:\ruta\del\proyecto
-.\start.ps1
-```
-
-O manualmente en terminales separadas:
+levantar servidores de manera separada
 
 **Terminal 1 — Auth Service:**
 ```bash
