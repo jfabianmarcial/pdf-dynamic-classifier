@@ -1,6 +1,6 @@
 # DocuClas — Sistema Distribuido de Clasificación de Documentos PDF
 
-Sistema distribuido para clasificar y recuperar documentos científicos mediante palabras clave, construido con Rust (gRPC), Python (sentence-transformers) y React.
+Sistema distribuido para clasificar y recuperar documentos PDF mediante palabras clave, construido con Rust (gRPC), Python (sentence-transformers) y React.
 
 ## Arquitectura
 deploy del servidor en render
